@@ -1,6 +1,7 @@
 'use strict';
 
 const uuid = require('uuid/v4');
+const productsModel = require('./products-schema.js');
 
 const schema = {
 };
@@ -8,22 +9,26 @@ const schema = {
 class Products {
 
   constructor() {
-    this.database = [];
+
   }
 
-  get(id) {
+  get(_id) {
+    let queryObject = _id ? {_id} : {};
+    return productsModel.find(queryObject);
   }
   
-  post(entry) {
+  post(record) {
+    let newRecord = new productsModel(record);
+    return newRecord.save();
   }
 
-  put(id, entry) {
+  put(_id, record) {
   }
 
-  delete(id) {
+  delete(_id) {
   }
 
-  sanitize(entry) {
+  sanitize(record) {
   }
 
 }
