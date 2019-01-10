@@ -7,11 +7,11 @@
 
 ### Links and Resources
 * [repo](https://github.com/niesssiobhan/13-rest-server)
-* [travis](http://xyz.com)
-* [server](http://xyz.com) (when applicable))
+* [travis](https://travis-ci.com/niesssiobhan/13-rest-server)
+* [server](https://git.heroku.com/niess-13-lab.git) 
 
 #### Documentation
-* [jsdoc](http://xyz.com) (All assignments)
+* [jsdoc](http://xyz.com) 
 
 ### Modules
 #### `categories.js`
