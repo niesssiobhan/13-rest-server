@@ -1,46 +1,36 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## REST Server
 
-### Author: Student/Group Name
+### Author: Siobhan Niess
 
 ### Links and Resources
-* [repo](http://xyz.com)
+* [repo](https://github.com/niesssiobhan/13-rest-server)
 * [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [server](http://xyz.com) (when applicable))
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
 * [jsdoc](http://xyz.com) (All assignments)
 
 ### Modules
-#### `modulename.js`
+#### `categories.js`
+#### `products.js`
+#### `app.js`
+#### `index.js`
 ##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
+* `PORT` - Port Number 3000
 * `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* node index.js
+run this command in your terminal
   
 #### Tests
 * How do you run tests?
+tests are done with supergoose.js
 * What assertions were made?
 * What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
