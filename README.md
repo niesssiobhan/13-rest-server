@@ -20,14 +20,32 @@
 #### `index.js`
 ##### Exported Values and Methods
 
+#### Collaborators
+* John
+* Heather
+* Becca
+
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number 3000
 * `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
-* node index.js
-run this command in your terminal
+* You willhave to have nodemon, httpi, and mongodb installed
+* run this command in your terminal `nodemon index.js`
+* open up another window/tab in your terminal and you will port with httpie `http :3000`
+* After this you will run mongodb by doing the follwing steps:
+    * `start mongodb path path/to/database`
+    * in another window/tab in your terminal you will run `start mongod` in another window
+    * then `show db`
+    * then `connect: db = connect("localhost:27017/products")`
+    * then `run: db.products.find().pretty();` to print all items in db
+* enter `http GET :3000/categories` or `http GET :8080/categories/<id>`
+* Add a category you will have to enter `echo '{"name":"Category Name","description":"Category Description"}' |http POST :3000/categories`
+* Add a product you will have to enter `echo '{"name":"Product Name","description":"Product Description"}' |http POST :3000/products`
+* Update a product you will have to enter `echo '{"name":"Product Name","description":"Product Description"}' |http PUT :3000/`products`
+* Update a category you will have to enter `echo '{"name":"Category Name","description":"Category Description"}' |http PUT :3000/categories`
+* Delete a record you will have to enter `http DELETE :3000/products/<id>`
   
 #### Tests
 * How do you run tests?
