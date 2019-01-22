@@ -14,6 +14,9 @@ const productsRouter = require( './api/products.js' );
 // Prepare the express app
 const app = express();
 
+// Static Routes
+app.use('/docs', express.static('docs'));
+
 // App Level MW
 app.use(cors());
 app.use(morgan('dev'));

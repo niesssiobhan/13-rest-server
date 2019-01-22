@@ -12,6 +12,7 @@
 
 #### Documentation
 * [jsdoc](http://xyz.com) 
+* [swagger]()
 
 ### Modules
 #### `categories.js`
@@ -28,7 +29,7 @@
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number 3000
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `MONGODB_URI` - MONGODB_URI=mongodb://localhost:27017/baseball
 
 #### Running the app
 * You willhave to have nodemon, httpi, and mongodb installed
@@ -49,6 +50,13 @@
   
 #### Tests
 * How do you run tests?
-tests are done with supergoose.js
+    * tests are done with supergoose.
+    * npm test
 * What assertions were made?
+    * get
+    * post
+    * put
+    * delete
 * What assertions need to be / should be made?
+    * products route
+    * categories route

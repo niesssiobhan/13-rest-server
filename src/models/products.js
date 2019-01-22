@@ -3,6 +3,11 @@
 const uuid = require('uuid/v4');
 const productsModel = require('./products-schema.js');
 
+/**
+ *
+ *
+ * @class Products
+ */
 class Products {
 
   constructor() {
