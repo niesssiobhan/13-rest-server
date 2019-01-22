@@ -3,6 +3,11 @@
 const uuid = require('uuid/v4');
 const sanitize = require('./sanitize.js');
 
+/**
+ *
+ *
+ * @class Categories
+ */
 class Categories {
 
   constructor() {
@@ -36,6 +41,23 @@ class Categories {
   delete(_id) {
     this.db = this.db.filter((record) => record._id !== _id);
     return Promise.resolve({});
+  }
+
+  sanitize(data) {
+    let valid = true;
+    let record = {};
+    for(let key in schema){
+      if(schema[key].required){
+        if(data[key]){
+          record[key] = data[key];
+        } else {
+          valid=false;
+        } 
+      } else {
+        record[key] = data[key];
+      }
+    }
+    return valid ? record : undefined;
   }
 
 }

@@ -8,6 +8,12 @@ const schema = {
 };
 
 
+/**
+ *
+ *
+ * @param {sanitize} data
+ * @returns record
+ */
 function sanitize(data) {
   let valid = true;
   let record = {};

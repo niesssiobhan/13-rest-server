@@ -16,6 +16,13 @@ router.put('/api/v1/categories/:id', putCategories);
 router.delete('/api/v1/categories/:id', deleteCategories);
 
 // FUNCTIONS
+/**
+ *
+ *
+ * @param {categories} request
+ * @param {array of object} response
+ * @param {move to next function} next
+ */
 function getCategories(request,response,next) {
   // expects an array of object to be returned from the model
   categories.get()
@@ -29,6 +36,13 @@ function getCategories(request,response,next) {
     .catch( next );
 }
 
+/**
+ *
+ *
+ * @param {categories} request
+ * @param {array with matching record} response
+ * @param {move to next function} next
+ */
 function getCategory(request,response,next) {
   // expects an array with the one matching record from the model
   categories.get(request.params.id)
@@ -36,6 +50,13 @@ function getCategory(request,response,next) {
     .catch( next );
 }
 
+/**
+ *
+ *
+ * @param {added to categories} request
+ * @param {record added to database} response
+ * @param {move to next function} next
+ */
 function postCategories(request,response,next) {
   // expects the record that was just added to the database
   categories.post(request.body)
@@ -44,6 +65,13 @@ function postCategories(request,response,next) {
 }
 
 
+/**
+ *
+ *
+ * @param {categories updated} request
+ * @param {record that was updated} response
+ * @param {move to next function} next
+ */
 function putCategories(request,response,next) {
   // expects the record that was just updated in the database
   categories.put(request.params.id, request.body)
@@ -51,6 +79,13 @@ function putCategories(request,response,next) {
     .catch( next );
 }
 
+/**
+ *
+ *
+ * @param {delete from categories} request
+ * @param {no return source deleted} response
+ * @param {move to next function} next
+ */
 function deleteCategories(request,response,next) {
   // Expects no return value (resource was deleted)
   categories.delete(request.params.id)
