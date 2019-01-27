@@ -11,8 +11,8 @@
 * [server](https://git.heroku.com/niess-13-lab.git) 
 
 #### Documentation
-* [jsdoc](http://xyz.com) 
-* [swagger]()
+* [jsdoc](https://niess-13-lab.herokuapp.com/docs) 
+* [swagger](https://app.swaggerhub.com/apis/niesssiobhan/13-rest-server/1.0.0)
 
 ### Modules
 #### `categories.js`
