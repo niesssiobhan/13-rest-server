@@ -7,12 +7,11 @@ const schema = {
   category: {require:true},
 };
 
-
 /**
  *
- *
- * @param {sanitize} data
- * @returns record
+ * Function that proocess valid data in the database 
+ * @param {*} data
+ * @returns resolved promise
  */
 function sanitize(data) {
   let valid = true;
