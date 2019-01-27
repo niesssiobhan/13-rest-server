@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: models/sanitize.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,52 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: models/sanitize.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 
+const schema = {
+  _id: {required:true},
+  name: {required:true},
+  description: {require:true},
+  category: {require:true},
+};
 
-    <h3> </h3>
+/**
+ *
+ * Function that proocess valid data in the database 
+ * @param {*} data
+ * @returns resolved promise
+ */
+function sanitize(data) {
+  let valid = true;
+  let record = {};
+  for(let key in schema){
+    if(schema[key].required){
+      if(data[key]){
+        record[key] = data[key];
+      }
+      else {
+        valid = false;
+      } 
+    }
+    else {
+      record[key] = data[key];
+    }
+  }
+  return valid ? record : undefined;
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = sanitize;</code></pre>
+        </article>
+    </section>
 
 
 
