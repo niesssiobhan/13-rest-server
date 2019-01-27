@@ -25,6 +25,7 @@
 * John
 * Heather
 * Becca
+* Brent
 
 ### Setup
 #### `.env` requirements
